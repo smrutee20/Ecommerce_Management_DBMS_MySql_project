@@ -47,3 +47,12 @@ Amongst many things that an online site requires the most important is a databas
 
 ### 2.2 Entity Relation Diagram
 
+
+## QUERIES ON THE ABOVE RELATIONAL SCHEMA
+1. Stored procedure for the details of the customer.
+2. View for getting sales by category of products.
+3. Using triggers to update the no.of products as soon as the payment is made.
+4. Trigger to update the total amount of user everytime he adds something to payment table.
+5. Stored procedure for getting order history.
+6. Processing an order
+
