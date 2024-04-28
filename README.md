@@ -65,3 +65,89 @@ You can directly copy and paste all the commands from the text given here into t
     );
 ```
 ![Cart Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Cart%20Description.jpg)
+
+```sql
+    CREATE TABLE Customer (
+    Customer_id VARCHAR(6) NOT NULL,
+    c_pass VARCHAR(10) NOT NULL,
+    Name VARCHAR(20) NOT NULL,
+    Address VARCHAR(20) NOT NULL,
+    Pincode INT(6) NOT NULL,
+    Phone_number_s INT(10) NOT NULL,
+    Cart_id VARCHAR(7) NOT NULL,
+    PRIMARY KEY (Customer_id),
+    FOREIGN KEY(Cart_id) REFERENCES Cart(Cart_id)
+    );
+```
+![Customer Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Customer%20table%20description.jpg)
+
+```sql
+    CREATE TABLE Seller (
+    Seller_id VARCHAR(6) NOT NULL,
+    s_pass VARCHAR(10) NOT NULL,
+    Name VARCHAR(20) NOT NULL,
+    Address VARCHAR(10) NOT NULL,
+    PRIMARY KEY (Seller_id)
+    );
+```
+![Seller Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Seller%20Table%20description.jpg)
+
+```sql
+    CREATE TABLE Seller_Phone_num (
+    Phone_num INT(10) NOT NULL,
+    Seller_id VARCHAR(6) NOT NULL,
+    PRIMARY KEY (Phone_num, Seller_id),
+    FOREIGN KEY (Seller_id) REFERENCES Seller(Seller_id)
+    ON DELETE CASCADE
+    );
+```
+![Seller Phone Number](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Seller%20Phone%20number%20table%20description.jpg)
+
+```sql
+        CREATE TABLE Payment
+        (
+        payment_id VARCHAR(7) NOT NULL,
+        payment_date DATE NOT NULL,
+        Payment_type VARCHAR(10) NOT NULL,
+        Customer_id VARCHAR(6) NOT NULL,
+        Cart_id VARCHAR(7) NOT NULL,
+        PRIMARY KEY (payment_id),
+        FOREIGN KEY (Customer_id) REFERENCES Customer(Customer_id),
+        FOREIGN KEY (Cart_id) REFERENCES Cart(Cart_id),
+        total_amount numeric(6)
+        );
+```
+![Payment Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Payment%20table%20description.jpg)
+
+```sql
+        CREATE TABLE Product
+        (
+        Product_id VARCHAR(7) NOT NULL,
+        Type VARCHAR(7) NOT NULL,
+        Color VARCHAR(15) NOT NULL,
+        P_Size VARCHAR(2) NOT NULL,
+        Gender CHAR(1) NOT NULL,
+        Commission NUMBER(2) NOT NULL,
+        Cost NUMBER(5) NOT NULL,
+        Quantity NUMBER(2) NOT NULL,
+        Seller_id VARCHAR(6),
+        PRIMARY KEY (Product_id),
+        FOREIGN KEY (Seller_id) REFERENCES Seller(Seller_id)
+        ON DELETE SET NULL
+        );
+```
+![Product Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Product%20table%20description.jpg)
+
+```sql
+        CREATE TABLE Cart_item
+        (
+        Quantity_wished NUMBER(1) NOT NULL,
+        Date_Added DATE NOT NULL,
+        Cart_id VARCHAR(7) NOT NULL,
+        Product_id VARCHAR(7) NOT NULL,
+        FOREIGN KEY (Cart_id) REFERENCES Cart(Cart_id),
+        FOREIGN KEY (Product_id) REFERENCES Product(Product_id),
+        Primary key(Cart_id,Product_id)
+        );
+```
+![Cart Item Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Cart%20Item%20description.jpg)
