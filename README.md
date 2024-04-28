@@ -64,3 +64,4 @@ You can directly copy and paste all the commands from the text given here into t
     PRIMARY KEY(Cart_id)
     );
 ```
+![Cart Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Cart%20Description.jpg)
