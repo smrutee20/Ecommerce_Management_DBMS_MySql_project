@@ -47,3 +47,19 @@ Amongst many things that an online site requires the most important is a databas
 
 ### 2.2 Entity Relation Diagram
 
+
+
+### 2.3 Relational Database Schema
+
+
+## 3. Implementation
+
+You can directly copy and paste all the commands from the text given here into the SQL console to create and insert values into your table.
+
+### 3.1 Creating Tables
+
+```CREATE TABLE Cart (
+    Cart_id VARCHAR(7) NOT NULL,
+    PRIMARY KEY(Cart_id)
+);```
+
