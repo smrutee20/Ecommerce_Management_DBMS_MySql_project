@@ -162,7 +162,7 @@ These are some demo values.
 ![Cart Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Cart_Values.jpg)
 
 ```sql
-        INSERT INTO Customer VALUES ('cid100', 'ABCM1235', 'rajat', 'G-453', '632014', 9893135876, 'crt1011');
+        INSERT INTO Customer VALUES ('cid100', 'ABCM1235', 'rajat', 'G-453', '632014', 9893, 'crt1011');
 ```
 ![Customer Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Customer%20Values.jpg)
 
@@ -177,7 +177,7 @@ These are some demo values.
 ![Product Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Product%20Values.jpg)
 
 ```sql
-        INSERT INTO Seller_Phone_num VALUES ('9943336206', 'sid100');
+        INSERT INTO Seller_Phone_num VALUES ('99433362', 'sid100');
 ```
 ![Seller Phone Num Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Seller%20Phone%20Number%20Values.jpg)
 
