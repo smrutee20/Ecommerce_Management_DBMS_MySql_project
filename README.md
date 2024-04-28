@@ -46,7 +46,7 @@ Amongst many things that an online site requires the most important is a databas
 - Admin can view total profit earned from the website.
 
 ### 2.2 Entity Relation Diagram
-
+![Entity Relation Diagram](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/er_diagram.png)
 
 
 ### 2.3 Relational Database Schema
