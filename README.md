@@ -58,8 +58,9 @@ You can directly copy and paste all the commands from the text given here into t
 
 ### 3.1 Creating Tables
 
-```CREATE TABLE Cart (
+```sql
+    CREATE TABLE Cart (
     Cart_id VARCHAR(7) NOT NULL,
     PRIMARY KEY(Cart_id)
-);```
-
+    );
+```
