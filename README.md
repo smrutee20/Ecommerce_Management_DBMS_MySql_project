@@ -54,9 +54,10 @@ Amongst many things that an online site requires the most important is a databas
 
 ## 3. Implementation
 
-You can directly copy and paste all the commands from the text given here into the SQL console to create and insert values into your table.
+All the commands are run on MySQL 8.0 Command Line Client.
 
 ### 3.1 Creating Tables
+Create tables for: Cart, Customer, Seller, Seller_Phone_num, Payment, Product, Cart_item.
 
 ```sql
     CREATE TABLE Cart (
@@ -154,7 +155,7 @@ You can directly copy and paste all the commands from the text given here into t
 
 ### 3.2 Inserting Values
 
-These are some demo values.
+Added some demo values to tables.
 
 ```sql
         INSERT INTO Cart VALUES ('crt1011');
