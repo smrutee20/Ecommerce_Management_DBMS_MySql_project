@@ -19,7 +19,6 @@ MySQL Setup: you can follow this link: (for windows user) https://www.youtube.co
   - Inserting data
 - Queries
   - Basic queries
-  - SQL function
  
 ## 1. Project Description
 
@@ -151,3 +150,42 @@ You can directly copy and paste all the commands from the text given here into t
         );
 ```
 ![Cart Item Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Cart%20Item%20description.jpg)
+
+### 3.2 Inserting Values
+
+These are some demo values.
+
+```sql
+        INSERT INTO Cart VALUES ('crt1011');
+```
+![Cart Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Cart_Values.jpg)
+
+```sql
+        INSERT INTO Customer VALUES ('cid100', 'ABCM1235', 'rajat', 'G-453', '632014', 9893135876, 'crt1011');
+```
+![Customer Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Customer%20Values.jpg)
+
+```sql
+        INSERT INTO Seller VALUES ('sid100', '12345', 'aman', 'delhi cmc');
+```
+![Seller Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Seller%20Values.jpg)
+
+```sql
+        INSERT INTO Product VALUES ('pid1001', 'jeans', 'red', '32', 'M', 10, 10005, 20, 'sid100');
+```
+![Product Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Product%20Values.jpg)
+
+```sql
+        INSERT INTO Seller_Phone_num VALUES ('9943336206', 'sid100');
+```
+![Seller Phone Num Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Seller%20Phone%20Number%20Values.jpg)
+
+```sql
+        INSERT INTO Cart_item VALUES (3, STR_TO_DATE('10-OCT-1999', '%d-%b-%Y'), 'crt1011', 'pid1001');
+```
+![Cart Item Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Cart%20Item%20Values.jpg)
+
+```sql
+        INSERT INTO Payment VALUES ('pmt1001', STR_TO_DATE('10-OCT-1999', '%d-%b-%Y'), 'online', 'cid100', 'crt1011', NULL);
+```
+![Payment Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Payment%20Values.jpg)
