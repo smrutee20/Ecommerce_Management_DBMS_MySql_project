@@ -45,11 +45,11 @@ Amongst many things that an online site requires the most important is a databas
 - Admin can view total profit earned from the website.
 
 ### 2.2 Entity Relation Diagram
-![Entity Relation Diagram](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/er_diagram.png)
+![Entity Relation Diagram](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/er_diagram.png)
 
 
 ### 2.3 Relational Database Schema
-![Relational Database Schema](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Relational%20Database%20Schema.png)
+![Relational Database Schema](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Relational%20Database%20Schema.png)
 
 
 ## 3. Implementation
@@ -80,7 +80,7 @@ Create tables for: Cart, Customer, Seller, Seller_Phone_num, Payment, Product, C
     FOREIGN KEY(Cart_id) REFERENCES Cart(Cart_id)
     );
 ```
-![Customer Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Customer%20table%20description.jpg)
+![Customer Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Customer%20table%20description.jpg)
 
 ```sql
     CREATE TABLE Seller (
@@ -91,7 +91,7 @@ Create tables for: Cart, Customer, Seller, Seller_Phone_num, Payment, Product, C
     PRIMARY KEY (Seller_id)
     );
 ```
-![Seller Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Seller%20Table%20description.jpg)
+![Seller Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Seller%20Table%20description.jpg)
 
 ```sql
     CREATE TABLE Seller_Phone_num (
@@ -102,7 +102,7 @@ Create tables for: Cart, Customer, Seller, Seller_Phone_num, Payment, Product, C
     ON DELETE CASCADE
     );
 ```
-![Seller Phone Number](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Seller%20Phone%20number%20table%20description.jpg)
+![Seller Phone Number](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Seller%20Phone%20number%20table%20description.jpg)
 
 ```sql
         CREATE TABLE Payment
@@ -118,7 +118,7 @@ Create tables for: Cart, Customer, Seller, Seller_Phone_num, Payment, Product, C
         total_amount numeric(6)
         );
 ```
-![Payment Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Payment%20table%20description.jpg)
+![Payment Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Payment%20table%20description.jpg)
 
 
 ```sql
@@ -138,7 +138,7 @@ Create tables for: Cart, Customer, Seller, Seller_Phone_num, Payment, Product, C
         ON DELETE SET NULL
         );
 ```
-![Product Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Product%20table%20description.jpg)
+![Product Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Product%20table%20description.jpg)
 
 ```sql
         CREATE TABLE Cart_item
@@ -152,7 +152,7 @@ Create tables for: Cart, Customer, Seller, Seller_Phone_num, Payment, Product, C
         Primary key(Cart_id,Product_id)
         );
 ```
-![Cart Item Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Cart%20Item%20description.jpg)
+![Cart Item Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Cart%20Item%20description.jpg)
 
 ### 3.2 Inserting Values
 
@@ -161,34 +161,34 @@ Added some demo values to tables.
 ```sql
         INSERT INTO Cart VALUES ('crt1011');
 ```
-![Cart Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Cart_Values.jpg)
+![Cart Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Cart_Values.jpg)
 
 ```sql
         INSERT INTO Customer VALUES ('cid100', 'ABCM1235', 'rajat', 'G-453', '632014', 9893, 'crt1011');
 ```
-![Customer Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Customer%20Values.jpg)
+![Customer Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Customer%20Values.jpg)
 
 ```sql
         INSERT INTO Seller VALUES ('sid100', '12345', 'aman', 'delhi cmc');
 ```
-![Seller Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Seller%20Values.jpg)
+![Seller Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Seller%20Values.jpg)
 
 ```sql
         INSERT INTO Product VALUES ('pid1001', 'jeans', 'red', '32', 'M', 10, 10005, 20, 'sid100');
 ```
-![Product Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Product%20Values.jpg)
+![Product Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Product%20Values.jpg)
 
 ```sql
         INSERT INTO Seller_Phone_num VALUES ('99433362', 'sid100');
 ```
-![Seller Phone Num Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Seller%20Phone%20Number%20Values.jpg)
+![Seller Phone Num Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Seller%20Phone%20Number%20Values.jpg)
 
 ```sql
         INSERT INTO Cart_item VALUES (3, STR_TO_DATE('10-OCT-1999', '%d-%b-%Y'), 'crt1011', 'pid1001');
 ```
-![Cart Item Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Cart%20Item%20Values.jpg)
+![Cart Item Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Cart%20Item%20Values.jpg)
 
 ```sql
         INSERT INTO Payment VALUES ('pmt1001', STR_TO_DATE('10-OCT-1999', '%d-%b-%Y'), 'online', 'cid100', 'crt1011', NULL);
 ```
-![Payment Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Payment%20Values.jpg)
+![Payment Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Payment%20Values.jpg)
