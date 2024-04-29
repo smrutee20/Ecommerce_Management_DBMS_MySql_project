@@ -65,8 +65,8 @@ Create tables for: Cart, Customer, Seller, Seller_Phone_num, Payment, Product, C
     PRIMARY KEY(Cart_id)
     );
 ```
-![Cart Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Cart%20Description.jpg)
-
+![Cart Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Cart%20Description.jpg)
+              
 ```sql
     CREATE TABLE Customer (
     Customer_id VARCHAR(6) NOT NULL,
@@ -119,6 +119,7 @@ Create tables for: Cart, Customer, Seller, Seller_Phone_num, Payment, Product, C
         );
 ```
 ![Payment Table](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/Payment%20table%20description.jpg)
+
 
 ```sql
         CREATE TABLE Product
