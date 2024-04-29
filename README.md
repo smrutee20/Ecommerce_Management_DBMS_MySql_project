@@ -1,4 +1,4 @@
-# Ecommerce_dbms-project
+# Ecommerce_Management_project
 This project is a part of NIT, Arunachal Pradesh for Database Management Systems (DBMS) - CS-309 Curriculum.<br>
 It contains theoretical as well as implementation in MySQL.<br>
 If you liked the repo do :star: it. 
