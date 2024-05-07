@@ -205,6 +205,7 @@ Added some demo values to tables.
   JOIN Product ON Cart_item.Product_id = Product.Product_id
   WHERE Cart_item.Cart_id = (SELECT Cart_id FROM Customer WHERE Customer_id = 'cid100');
 ```
+![Query1](https://github.com/smrutee20/Ecommerce_Management_DBMS_MySql_project/blob/main/Query1.jpg)
 
 #### If a customer wants to see order history
 
@@ -215,6 +216,7 @@ Added some demo values to tables.
   JOIN Payment ON Cart_item.Cart_id = Payment.Cart_id
   WHERE Payment.Customer_id = 'cid100';
 ```
+![Query2](https://github.com/smrutee20/Ecommerce_Management_DBMS_MySql_project/blob/main/Query2.jpg)
 
 #### Customer wants to see filtered products on the basis of size,gender,type
 
@@ -223,6 +225,7 @@ Added some demo values to tables.
   FROM Product
   WHERE P_Size = '32' AND Gender = 'M' AND Type = 'jeans';
 ```
+![Query3](https://github.com/smrutee20/Ecommerce_Management_DBMS_MySql_project/blob/main/Query3.jpg)
 
 #### If admin want to see what are the product purchased on the particular date
 
@@ -233,6 +236,7 @@ Added some demo values to tables.
   JOIN Payment ON Cart_item.Cart_id = Payment.Cart_id
   WHERE Payment.payment_date = '2024-04-29';
 ```
+![Query4](https://github.com/smrutee20/Ecommerce_Management_DBMS_MySql_project/blob/main/Query4.jpg)
 
 #### How much product sold on the particular date
 
@@ -242,6 +246,7 @@ Added some demo values to tables.
   JOIN Payment ON Cart_item.Cart_id = Payment.Cart_id
   WHERE Payment.payment_date = '2024-04-29';
 ```
+![Query5](https://github.com/smrutee20/Ecommerce_Management_DBMS_MySql_project/blob/main/Query5.jpg)
 
 #### Show the details of the customer who has not purchased any thing
  ```sql
@@ -249,6 +254,8 @@ Added some demo values to tables.
   FROM Customer
   WHERE Customer_id NOT IN (SELECT DISTINCT Customer_id FROM Payment);
 ```
+![Query6](https://github.com/smrutee20/Ecommerce_Management_DBMS_MySql_project/blob/main/Query6.jpg)
+
 ## Contributors
 
 - [@SmruteeBehera](https://github.com/smrutee20)
