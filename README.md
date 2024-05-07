@@ -192,3 +192,64 @@ Added some demo values to tables.
         INSERT INTO Payment VALUES ('pmt1001', STR_TO_DATE('10-OCT-1999', '%d-%b-%Y'), 'online', 'cid100', 'crt1011', NULL);
 ```
 ![Payment Values](https://github.com/smrutee20/Ecommerce_dbms-project/blob/main/images/Payment%20Values.jpg)
+
+## 4. Queries
+
+### 4.1 Basic Queries
+
+#### If the customer wants to see details of product present in the cart
+
+```sql
+  SELECT Product.Product_id, Product.Type, Product.Color, Product.P_Size, Product.Gender, Product.Cost, Cart_item.Quantity_wished
+  FROM Cart_item
+  JOIN Product ON Cart_item.Product_id = Product.Product_id
+  WHERE Cart_item.Cart_id = (SELECT Cart_id FROM Customer WHERE Customer_id = 'cid100');
+```
+
+#### If a customer wants to see order history
+
+```sql
+  SELECT Cart_item.Date_Added, Product.Product_id, Product.Type, Product.Color, Product.P_Size, Product.Gender, Product.Cost, Cart_item.Quantity_wished
+  FROM Cart_item
+  JOIN Product ON Cart_item.Product_id = Product.Product_id
+  JOIN Payment ON Cart_item.Cart_id = Payment.Cart_id
+  WHERE Payment.Customer_id = 'cid100';
+```
+
+#### Customer wants to see filtered products on the basis of size,gender,type
+
+```sql
+  SELECT *
+  FROM Product
+  WHERE P_Size = '32' AND Gender = 'M' AND Type = 'jeans';
+```
+
+#### If admin want to see what are the product purchased on the particular date
+
+```sql
+  SELECT Product.Product_id, Product.Type, Product.Color, Product.P_Size, Product.Gender
+  FROM Product
+  JOIN Cart_item ON Product.Product_id = Cart_item.Product_id
+  JOIN Payment ON Cart_item.Cart_id = Payment.Cart_id
+  WHERE Payment.payment_date = '2024-04-29';
+```
+
+#### How much product sold on the particular date
+
+```sql
+  SELECT SUM(Cart_item.Quantity_wished) AS total_sold
+  FROM Cart_item
+  JOIN Payment ON Cart_item.Cart_id = Payment.Cart_id
+  WHERE Payment.payment_date = '2024-04-29';
+```
+
+#### Show the details of the customer who has not purchased any thing
+ ```sql
+  SELECT *
+  FROM Customer
+  WHERE Customer_id NOT IN (SELECT DISTINCT Customer_id FROM Payment);
+```
+## Contributors
+
+- [@SmruteeBehera](https://github.com/smrutee20)
+- [@ManasviSharma](https://github.com/manasvish2003/)
